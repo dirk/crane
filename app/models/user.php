@@ -5,10 +5,10 @@ class User extends Model {
 		parent::Model();
 		// Defines the structure of the model in the database.
 		$this->structure = array(
-			'username' => $this->fields->string,
+			'username' => $this->fields->string(array('null' => false)),
 		);
 	}
 }
 //anything below here is basicly a controller
-$user = new User();
-print_r($user->structure());
+//$user = new User();
+//print_r($user->structure());
