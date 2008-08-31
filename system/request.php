@@ -14,7 +14,7 @@ class Request {
         } else if($key) {
             return (isset($_GET[$key])) ? $_GET[$key] : false;
         } else {
-            return array_merge($_GET, Request::data());
+            return $_GET;
         }
     }
     
@@ -62,8 +62,8 @@ class Request {
     }
     
     function data($key=false) {
-        $vars = array();
-        foreach(Request::segment() as $data) {
+        /*$vars = array();
+        foreach($this->segments as $data) {
             if(eregi(':', $data)) {
                 foreach(explode('&', $data) as $var) {
                     $set = explode(':', $var);
@@ -72,7 +72,8 @@ class Request {
             }
         }
         if($key) return (isset($vars[$key])) ? $vars[$key] : false;
-        if(!$key) return $vars;
+        if(!$key) return $vars;*/
+		return array();
     }
     
     function browser() {
