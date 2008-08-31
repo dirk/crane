@@ -12,7 +12,7 @@ class User extends Model {
 		);
 		// Defines how the model is related to other models.
 		$this->related = array(
-			'role' => new BelongsTo('role_id', 'Role'),
+			'role' => new BelongsTo('Role', 'role_id'),
 		);
 	}
 }

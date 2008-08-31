@@ -1,8 +1,8 @@
 <?php
 class BelongsTo {
 	var $name, $parent;
-	function BelongsTo($name, $parent){
-		$this->name = $name;$this->parent = $parent;
+	function BelongsTo($parent, $name){
+		$this->parent = $parent;$this->name = $name;
 	}
 }
 
