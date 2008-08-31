@@ -1,1 +1,11 @@
-More information to come soon. This is definitely a _major_ work in progress.
+h2. Currently central todo-list and "ticket repository"
+
+h3. FIXME
+
+database.php (2): Actually put in connection and query processing methods. (Processing methods must be ORM-independent.)
+models.php (32): Use or remove Fields class.
+
+h3. TODO
+
+record.php (2): Decide how ActiveRecord and it's finding, inserting, and updating methods will interface with models and queries.
+request.php (2): Evaluate Request system and decide if it needs reworking for more compatibility.
