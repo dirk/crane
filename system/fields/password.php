@@ -1,7 +1,7 @@
 <?php
 class PasswordField {
 	var $options;
-	function PasswordField($name, $options){
+	function PasswordField($name, $options = array()){
 		// Assign the options it's passed with.
 		$this->options = $options;$this->name = $name;
 	}

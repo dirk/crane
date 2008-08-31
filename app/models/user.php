@@ -8,12 +8,16 @@ class User extends Model {
 			//'username' => $this->fields->string('username', array('null' => false)),
 			'username' => new StringField('username', array('null' => false)),
 			'password' => new PasswordField('pass', array('null' => false)),
+			'role_id' => new KeyField('role_id'),
 		);
+		// Defines how the model is related to other models.
 		$this->related = array(
-			''
+			'role' => new BelongsTo('role_id', 'Role'),
 		);
 	}
 }
 //anything below here is basicly a controller
 //$user = new User();
 //print_r($user->structure());
+
+// EOF

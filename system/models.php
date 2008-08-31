@@ -8,8 +8,29 @@ class Model {
 }
 require_once 'fields/string.php';
 require_once 'fields/password.php';
+require_once 'fields/key.php';
+
+
+class BelongsTo {
+	var $name, $parent;
+	function BelongsTo($name, $parent){
+		$this->name = $name;$this->parent = $parent;
+	}
+}
+
+
+
+
+
+
+
+
+
 // Class of built-in fields.
 class Fields {
+	// Currently unused.
+	// FIXME: Use or remove Fields class.
+	
 	// -- CONCEPT --
 	// format defines how to format it. [integer, string]
 	// schema defines what schema to use in the CREATE. [`string` VARCHAR( 255 )% NULL%% DEFAULT %]
@@ -30,9 +51,11 @@ class Fields {
 		)
 	);
 	var $password = 'a password';
-	var $url = 'a URL';*/
+	var $url = 'a URL';
 	function string($name, $options){
 		$field = new StringField($name, $options);
 		return $field;
-	}
+	}*/
 }
+
+// EOF
