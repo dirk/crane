@@ -6,20 +6,16 @@ class BelongsTo {
 		// Auto-load tells it whether or not to auto-matically load the parent when the load() event is called.
 		$this->autoload = $autoload;
 	}
-	function load($id, $force = false){
-		if($this->autoload == true || $force == true){
-			// Load the data from the database
-			/*
-			$parent = new $this->parent();
-			$data = query('SELECT ' . build_schema($parent->structure) . ' FROM ' . $parent->name . ' WHERE id = ' . $id);
-			foreach($data as $key => $value){
-				$parent->$key = $value;
-			}
-			return $parent;
-			*/
-		}else{
-			return false;
+	function load($id){
+		// Load the data from the database
+		/*
+		$parent = new $this->parent();
+		$data = query('SELECT ' . build_schema($parent->structure) . ' FROM ' . $parent->name . ' WHERE id = ' . $id);
+		foreach($data as $key => $value){
+			$parent->$key = $value;
 		}
+		return $parent;
+		*/
 	}
 }
 
