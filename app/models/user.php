@@ -16,8 +16,5 @@ class User extends Model {
 		);
 	}
 }
-//anything below here is basicly a controller
-//$user = new User();
-//print_r($user->structure());
 
 // EOF
