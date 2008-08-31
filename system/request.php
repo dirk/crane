@@ -1,4 +1,6 @@
 <?php
+// TODO: Evaluate Request system and decide if it needs reworking for more compatibility.
+
 class Request {
     
 	function Request() {
