@@ -10,3 +10,12 @@ $files = array(
 foreach($files as $file){
 	require_once($file);
 }
+
+// Utility function. Nowhere else to put it.
+function starts_with($string, $start){
+	if(substr($string, 0, strlen($start)) == $start){
+		return true;
+	}else{
+		return false;
+	}
+}
