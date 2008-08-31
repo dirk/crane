@@ -6,6 +6,8 @@ class Model {
 		$this->fields = new Fields();
 	}
 }
+require_once 'fields/string.php';
+require_once 'fields/password.php';
 // Class of built-in fields.
 class Fields {
 	// -- CONCEPT --
@@ -29,31 +31,8 @@ class Fields {
 	);
 	var $password = 'a password';
 	var $url = 'a URL';*/
-	function string($options){
-		$field = new StringField($options);
+	function string($name, $options){
+		$field = new StringField($name, $options);
 		return $field;
-	}
-}
-class StringField {
-	var $options;
-	function StringField($options){
-		// Assign the options it's passed with.
-		$this->options = $options;
-	}
-	function create($name){
-		$options = $this->options;
-		$base = "`$name` VARCHAR(255)";
-		// Depending on if it can be null or not.
-		if($options['null'] == true){
-			$base .= ' NULL';
-		}else{
-			$base .= ' NOT NULL';
-		}
-		// Check if it specifies a default value
-		if(!empty($options['default'])){
-			// Results in: DEFAULT 'string'
-			$base .= ' DEFAULT \'' . $options['default'] . '\'';
-		}
-		return $base;
 	}
 }

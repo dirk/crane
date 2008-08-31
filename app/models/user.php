@@ -5,7 +5,12 @@ class User extends Model {
 		parent::Model();
 		// Defines the structure of the model in the database.
 		$this->structure = array(
-			'username' => $this->fields->string(array('null' => false)),
+			//'username' => $this->fields->string('username', array('null' => false)),
+			'username' => new StringField('username', array('null' => false)),
+			'password' => new PasswordField('pass', array('null' => false)),
+		);
+		$this->related = array(
+			''
 		);
 	}
 }
