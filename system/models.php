@@ -3,7 +3,7 @@
 class Model {
 	var $fields, $structure;
 	function Model(){
-		$this->fields = new Fields();
+		//$this->fields = new Fields();
 	}
 }
 // "built in" becomes "bin"
