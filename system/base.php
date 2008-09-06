@@ -11,6 +11,14 @@ foreach($files as $file){
 	require_once($file);
 }
 
+class Crane {
+	var $database;
+	function Crane(){
+		$database = new Database();
+	}
+}
+$crane = new Crane();
+
 // Utility function. Nowhere else to put it.
 function starts_with($string, $start){
 	if(substr($string, 0, strlen($start)) == $start){
