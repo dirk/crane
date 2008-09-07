@@ -16,5 +16,13 @@ class User extends Model {
 		);
 	}
 }
-
+/*
+ CREATE TABLE `crane`.`users` (
+`id` INT UNSIGNED NOT NULL ,
+`username` VARCHAR( 255 ) NOT NULL ,
+`password` VARCHAR( 255 ) NOT NULL ,
+`role_id` INT UNSIGNED NOT NULL ,
+PRIMARY KEY ( `id` )
+) ENGINE = MYISAM
+*/
 // EOF

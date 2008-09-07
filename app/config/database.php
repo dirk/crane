@@ -4,4 +4,5 @@ $database['default'] = array(
 	'host' => 'localhost',
 	'username' => 'root',
 	'password' => '',
+	'database' => 'crane',
 );
