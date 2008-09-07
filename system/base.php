@@ -7,6 +7,9 @@ $files = array(
 	'models.php',
 	'record.php',
 );
+/*
+	TODO: Major clean-up for these loading systems. Esp. config.
+*/
 foreach($files as $file){
 	require_once($file);
 }

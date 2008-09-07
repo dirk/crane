@@ -1,11 +1,9 @@
 h2. Currently central todo-list and "ticket repository"
 
-h3. FIXME
-
-database.php (2): Actually put in connection and query processing methods. (Processing methods must be ORM-independent.)
-
 h3. TODO
 
-record.php (2): Decide how ActiveRecord and it's finding, inserting, and updating methods will interface with models and queries.
+base.php (11)	 Major clean-up for these loading systems. Esp. config.
 
-request.php (2): Evaluate Request system and decide if it needs reworking for more compatibility.
+record.php (2)	 Decide how ActiveRecord and it's finding, inserting, and updating methods will interface with models and queries.
+
+request.php (2)	 Evaluate Request system and decide if it needs reworking for more compatibility.
