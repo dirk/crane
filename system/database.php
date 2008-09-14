@@ -7,10 +7,11 @@ class Database {
 		mysql_select_db($profile['database'], $this->connection);
 	}
 	function query($query){
-		$result = mysql_query("SELECT * FROM users", $this->connection) or die("error querying database");
-		while($row = mysql_fetch_assoc($result)){
-			print_r($row);
-		}
+		$result = mysql_query($query, $this->connection) or die("error querying database");
+		//while($row = mysql_fetch_assoc($result)){
+		//	print_r($row);
+		//}
+		return $result;
 	}
 }
 

@@ -7,8 +7,10 @@ require_once(SYSTEM . '/base.php');
 //foreach (scandir(SYSTEM) as $filename) {
 //    if($filename != '.' && $filename != '..') include_once(SYSTEM.'/'.$filename);
 //}
-require('app/models/user.php');
-$user = new User();
+//require('app/models/user.php');
+//$user = new User();
 //print_r($user->structure['username']->insert('test'));
-$crane->database->query('');
+//$crane->database->query('');
+$crane->model('User');
+$crane->User->query();
 ?>

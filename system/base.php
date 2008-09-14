@@ -41,6 +41,13 @@ class Crane {
 			}
 		}
 	}
+	function model($name){
+		$lower = strtolower($name);
+		require(ROOT . '/app/models/' . $lower . '.php');
+		$this->models[$name] = new $name($this);
+		$this->$name = new Record($this->models[$name], $this);
+	}
 }
+global $crane;
 $crane = new Crane();
 

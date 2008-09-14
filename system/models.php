@@ -1,9 +1,15 @@
 <?php
 // Base model class
 class Model {
-	var $fields, $structure;
+	var $crane;
+	var $name, $fields, $structure;
 	function Model(){
 		//$this->fields = new Fields();
+		global $crane;
+		$this->crane &= $crane;
+	}
+	function ORM(){
+		//$this->crane->add_model($this);
 	}
 }
 // "built in" becomes "bin"
